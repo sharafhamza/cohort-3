@@ -1,24 +1,9 @@
 const express = require("express");
 const app = express();
+const { userRouter } = require("./routes/user");
+const { courseRouter } = require("./routes/course");
 
-app.post("/user/signup", (req, res) => {
-  console.log("sign up page");
-});
-
-app.post("/user/signin", (req, res) => {
-  console.log("sign up page");
-});
-
-app.get("/courses", (req, res) => {
-  console.log("sign up page");
-});
-
-app.get("/user/purchases", (req, res) => {
-  console.log("sign up page");
-});
-
-app.post("/course/purchase", (req, res) => {
-  console.log("sign up page");
-});
+app.use("/user", userRouter);
+app.use("/course", courseRouter);
 
 app.listen(3000);
