@@ -83,16 +83,20 @@ adminRouter.put("/course", adminMiddleware, async (req, res) => {
       creatorId: adminId,
     }
   );
+  res.json({
+    message: "Course Updated",
+    courseId: course._id,
+  });
 });
 
 adminRouter.get("/course/bulk", adminMiddleware, async (req, res) => {
   const adminId = req.userId;
-  const courses = await courseModel.updateOne({
+  const courses = await courseModel.find({
     creatorId: adminId,
   });
 
   res.json({
-    message: course,
+    message: courses,
   });
 });
 
