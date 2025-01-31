@@ -15,7 +15,7 @@ const Button = ({ title, variant, icon }: buttonTypes) => {
     <button
       className={
         variantStyles[variant] +
-        " py-2 px-6 rounded-md m-4 flex items-center text-base cursor-pointer"
+        " py-2 px-6 rounded-md ml-4  my-5 flex items-center text-base cursor-pointer"
       }
     >
       {icon ? <div className="mr-2">{icon}</div> : null}

@@ -5,11 +5,14 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 import { IoLinkSharp } from "react-icons/io5";
 import { FaHashtag } from "react-icons/fa";
 import Card from "./Card";
+import Button from "./Button";
+import PlusIcon from "./icons/PlusIcon";
+import ShareIcons from "./icons/ShareIcons";
 
 const Sideber = () => {
   return (
-    <div className="flex">
-      <div className="w-[15%] pl-9 h-screen absolute left-0 top-0 border-r-slate-300 border-r-2">
+    <div className="bg-main-bg">
+      <div className="w-[15%] bg-white pl-9 h-screen absolute left-0 top-0 border-r-slate-300 border-r-2">
         <SideberItem
           title="Twitter"
           icon={<BsTwitterX className="text-lg" />}
@@ -28,8 +31,23 @@ const Sideber = () => {
         />
         <SideberItem title="Tags" icon={<FaHashtag className="text-2xl" />} />
       </div>
-      <div>
-        <Card />
+      <div className="ml-[18%] mr-[4%] h-screen">
+        <div className="flex justify-between items-center">
+          <h2 className="font-bold text-3xl">All Notes</h2>
+          <div className="flex">
+            <Button title="Add Content" icon={<PlusIcon />} variant="primary" />
+            <Button
+              title="Share Brain"
+              icon={<ShareIcons />}
+              variant="secondary"
+            />
+          </div>
+        </div>
+        <div className="flex gap-10 justify-between">
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
     </div>
   );
