@@ -4,7 +4,7 @@ import { AiTwotoneDelete } from "react-icons/ai";
 
 const Card = () => {
   return (
-    <div className="w-1/3 h-fit bg-white p-4 border-slate-200 border rounded-2xl">
+    <div className="w-1/3 h-auto bg-white p-4 border-slate-200 border rounded-2xl">
       <div className="flex justify-between">
         <div className="flex gap-1.5">
           <IoDocumentTextOutline className="text-2xl text-icon cursor-pointer" />
