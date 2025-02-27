@@ -8,11 +8,17 @@ import Card from "./Card";
 import Button from "./Button";
 import PlusIcon from "./icons/PlusIcon";
 import ShareIcons from "./icons/ShareIcons";
+import { LuBrain } from "react-icons/lu";
 
 const Sideber = () => {
   return (
     <div className="bg-main-bg">
       <div className="w-[15%] bg-white pl-9 h-screen absolute left-0 top-0 border-r-slate-300 border-r-2">
+        <div className="flex items-center gap-3 my-4 mb-8">
+          <LuBrain className="text-primary text-4xl" />
+          <h2 className="text-2xl font-semibold">Second Brain</h2>
+        </div>
+
         <SideberItem
           title="Twitter"
           icon={<BsTwitterX className="text-lg" />}
@@ -32,7 +38,7 @@ const Sideber = () => {
         <SideberItem title="Tags" icon={<FaHashtag className="text-2xl" />} />
       </div>
       <div className="ml-[18%] mr-[4%] h-screen">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mt-4 mb-6">
           <h2 className="font-bold text-3xl">All Notes</h2>
           <div className="flex">
             <Button title="Add Content" icon={<PlusIcon />} variant="primary" />
